@@ -19,4 +19,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="@+id/text_notifications"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <ImageButton
+        android:id="@+id/rightbutton"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <ImageButton
+        android:id="@+id/leftbutton"
+        android:layout_width="66dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/ic_media_play"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="85dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
