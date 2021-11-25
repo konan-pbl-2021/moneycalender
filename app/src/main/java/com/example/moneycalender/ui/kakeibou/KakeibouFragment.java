@@ -1,5 +1,6 @@
 package com.example.moneycalender.ui.kakeibou;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ public class KakeibouFragment extends Fragment {
 
     private KakeibouViewModel kakeibouViewModel;
     private  static int i = 10;
+    private static int sum = 0;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -25,16 +27,16 @@ public class KakeibouFragment extends Fragment {
         kakeibouViewModel =
                 ViewModelProviders.of(this).get(KakeibouViewModel.class);
 
-        TextView textView1 = (TextView)root.findViewById(R.id.month);
-        textView1.setText(String.valueOf(i) + "月");
+        TextView month = (TextView)root.findViewById(R.id.month);
+        month.setText(String.valueOf(i) + "月");
 
         ImageButton leftbutton = (ImageButton)root.findViewById(R.id.leftbutton);
         leftbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                TextView textView1 = (TextView)root.findViewById(R.id.month);
+                TextView month = (TextView)root.findViewById(R.id.month);
                 if(i > 1){
                     i --;
-                    textView1.setText(String.valueOf(i) + "月");
+                    month.setText(String.valueOf(i) + "月");
                 }
             }
         });
@@ -43,10 +45,10 @@ public class KakeibouFragment extends Fragment {
         ImageButton rightbutton = (ImageButton)root.findViewById(R.id.rightbutton);
         rightbutton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                TextView textView1 = (TextView)root.findViewById(R.id.month);
+                TextView month = (TextView)root.findViewById(R.id.month);
                 if(i < 12){
                     i ++;
-                    textView1.setText(String.valueOf(i) + "月");
+                    month.setText(String.valueOf(i) + "月");
                 }
             }
         });
@@ -70,6 +72,19 @@ public class KakeibouFragment extends Fragment {
         EditText kingaku5 = (EditText)root.findViewById(R.id.kingaku5);
         String inputStr5 = kingaku5.getText().toString();
         kingaku5.setText(inputStr5 + "円");
+        //int sum;
+        //sum = Integer.parseInt(inputStr1) + Integer.parseInt(inputStr2) + Integer.parseInt(inputStr3) + Integer.parseInt(inputStr4) + Integer.parseInt(inputStr5);
+
+        TextView goukei_zankin = (TextView)root.findViewById(R.id.goukei_zankin);
+        goukei_zankin.setText("合計残金                                            " + String.valueOf(sum) + "円");
+        TextView goukei_syunyu = (TextView)root.findViewById(R.id.goukei_syunyu);
+        goukei_syunyu.setText("合計収入                                            " + String.valueOf(sum) + "円");
+        TextView goukei_sisyutsu = (TextView)root.findViewById(R.id.goukei_sisyutsu);
+        goukei_sisyutsu.setText("合計残金                                            " + String.valueOf(sum) + "円");
+        TextView zankin = (TextView)root.findViewById(R.id.zankin);
+        zankin.setText("合計残金                                            " + String.valueOf(sum) + "円");
+
+
 
 
 
