@@ -19,6 +19,7 @@ public class SifutoFragment extends Fragment {
     private ShiftViewModel shiftViewModel;
     private static int i = 10;
     private static int sum=0;
+    private static int t = 1;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -35,10 +36,12 @@ public class SifutoFragment extends Fragment {
                     i --;
                     Month.setText(String.valueOf(i) + "月");
                 }
+                else{
+                    i = 12;
+                    Month.setText(String.valueOf(i) + "月");
+                }
             }
         });
-        ButtonLeft.setRotation(180f);
-
         ImageButton ButtonRight = (ImageButton)root.findViewById(R.id.ButtonRight);
         ButtonRight.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -47,12 +50,18 @@ public class SifutoFragment extends Fragment {
                     i ++;
                     Month.setText(String.valueOf(i) + "月");
                 }
+                else {
+                    i = 1;
+                    Month.setText(String.valueOf(i) + "月");
+                }
             }
         });
+
 
         /*合計収入*/
         TextView Sum = (TextView)root.findViewById(R.id.Sum);
         Sum.setText("合計収入"+ String.valueOf(sum) + "円");
+
 
         /*バイト名・時給*/
         TextView Workname = (TextView)root.findViewById(R.id.WorkName);
@@ -100,6 +109,38 @@ public class SifutoFragment extends Fragment {
         String inpuStr_money1 = money1.getText().toString();
         workmoney1.setText(String.valueOf(inpuStr_money1) + "円");
 
+
+        /*ぺージの変更*/
+        TextView Page = (TextView)root.findViewById(R.id.Page);
+        Page.setText(String.valueOf(t));
+        ImageButton btn_l = (ImageButton)root.findViewById(R.id.ButtonLeft2);
+        btn_l.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                TextView Page = (TextView)root.findViewById(R.id.Page);
+                if(t > 1){
+                    t --;
+                    Page.setText(String.valueOf(t));
+                }
+                else{
+                    t = 50;
+                    Page.setText(String.valueOf(t));
+                }
+            }
+        });
+        ImageButton btn_r = (ImageButton)root.findViewById(R.id.ButtonRight2);
+        btn_r.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                TextView Page = (TextView)root.findViewById(R.id.Page);
+                if(t < 50){
+                    t ++;
+                    Page.setText(String.valueOf(t));
+                }
+                else{
+                    t = 1;
+                    Page.setText(String.valueOf(t));
+                }
+            }
+        });
 
         shiftViewModel = ViewModelProviders.of(this).get(ShiftViewModel.class);
         return root;
