@@ -12,12 +12,12 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <ImageButton
         android:id="@+id/rightbutton"
@@ -26,10 +26,10 @@
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.044" />
 
     <ImageButton
         android:id="@+id/leftbutton"
@@ -41,22 +41,23 @@
         app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.044" />
 
     <TextView
         android:id="@+id/syuukei"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="集計"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.204" />
+        app:layout_constraintVertical_bias="0.15" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="391dp"
         android:layout_height="251dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,7 +94,7 @@
 
             <EditText
                 android:id="@+id/kategori1"
-                android:layout_width="194dp"
+                android:layout_width="155dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
                 android:ems="10"
@@ -101,13 +102,12 @@
 
             <EditText
                 android:id="@+id/kingaku1"
-                android:layout_width="161dp"
+                android:layout_width="173dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:ems="10"
                 android:gravity="right"
-                android:inputType="textPersonName"
-                android:textSize="18sp" />
+                android:inputType="number" />
+
         </TableRow>
 
         <TableRow
@@ -124,12 +124,11 @@
 
             <EditText
                 android:id="@+id/kingaku2"
-                android:layout_width="195dp"
+                android:layout_width="191dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:ems="10"
                 android:gravity="right"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
         </TableRow>
 
         <TableRow
@@ -146,12 +145,12 @@
 
             <EditText
                 android:id="@+id/kingaku3"
-                android:layout_width="127dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:ems="10"
                 android:gravity="right"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
+
         </TableRow>
 
         <TableRow
@@ -160,7 +159,7 @@
 
             <EditText
                 android:id="@+id/kategori4"
-                android:layout_width="194dp"
+                android:layout_width="166dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:ems="10"
@@ -168,12 +167,12 @@
 
             <EditText
                 android:id="@+id/kingaku4"
-                android:layout_width="135dp"
+                android:layout_width="176dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
                 android:ems="10"
                 android:gravity="right"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
+
         </TableRow>
 
         <TableRow
@@ -190,14 +189,66 @@
 
             <EditText
                 android:id="@+id/kingaku5"
-                android:layout_width="190dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="right"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
+
         </TableRow>
 
     </TableLayout>
+
+    <TextView
+        android:id="@+id/goukei_zankin"
+        android:layout_width="315dp"
+        android:layout_height="30dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/month"
+        app:layout_constraintVertical_bias="0.369" />
+
+    <TextView
+        android:id="@+id/goukei_syunyu"
+        android:layout_width="315dp"
+        android:layout_height="30dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goukei_zankin"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <TextView
+        android:id="@+id/goukei_sisyutsu"
+        android:layout_width="315dp"
+        android:layout_height="30dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goukei_syunyu"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <TextView
+        android:id="@+id/zankin"
+        android:layout_width="315dp"
+        android:layout_height="30dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goukei_sisyutsu"
+        app:layout_constraintVertical_bias="0.171" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
