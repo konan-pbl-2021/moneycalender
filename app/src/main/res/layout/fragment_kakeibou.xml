@@ -35,6 +35,7 @@
         android:id="@+id/leftbutton"
         android:layout_width="66dp"
         android:layout_height="50dp"
+        android:rotation="180"
         android:src="@android:drawable/ic_media_play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
