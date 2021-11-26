@@ -3,4 +3,7 @@
     <string name="title_home">シフト計算</string>
     <string name="title_dashboard">Home</string>
     <string name="title_notifications">家計薄</string>
+    <string name="plain_text1">収支：</string>
+    <string name="plain_text2">支出：</string>
+    <string name="plain_text3">合計：</string>
 </resources>
