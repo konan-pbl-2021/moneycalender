@@ -40,6 +40,7 @@ public class SifutoFragment extends Fragment {
                     i = 12;
                     Month.setText(String.valueOf(i) + "月");
                 }
+
             }
         });
         ImageButton ButtonRight = (ImageButton)root.findViewById(R.id.ButtonRight);
@@ -66,12 +67,12 @@ public class SifutoFragment extends Fragment {
         /*バイト名・時給*/
         TextView Workname = (TextView)root.findViewById(R.id.WorkName);
         Workname.setText("バイト名");
-        TextView Workmoney = (TextView)root.findViewById(R.id.WorkMoney);
+        final TextView Workmoney = (TextView)root.findViewById(R.id.WorkMoney);
         Workmoney.setText("時給");
 
         EditText workname1 = (EditText)root.findViewById(R.id.WorkName1);
         String inpuStr_n1 = workname1.getText().toString();
-        EditText workmoney1 = (EditText)root.findViewById(R.id.WorkMoney1);
+        final EditText workmoney1 = (EditText)root.findViewById(R.id.WorkMoney1);
         String inpuStr_m1 = workmoney1.getText().toString();
         workmoney1.setText(String.valueOf(inpuStr_m1) + "円");
 
@@ -86,6 +87,8 @@ public class SifutoFragment extends Fragment {
         EditText workmoney3 = (EditText)root.findViewById(R.id.WorkMoney3);
         String inpuStr_m3 = workmoney3.getText().toString();
         workmoney3.setText(String.valueOf(inpuStr_m3) + "円");
+
+
 
 
         /*詳細*/
@@ -141,6 +144,8 @@ public class SifutoFragment extends Fragment {
                 }
             }
         });
+
+
 
         shiftViewModel = ViewModelProviders.of(this).get(ShiftViewModel.class);
         return root;
