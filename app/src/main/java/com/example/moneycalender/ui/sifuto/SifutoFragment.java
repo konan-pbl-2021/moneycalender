@@ -139,7 +139,7 @@ public class SifutoFragment extends Fragment {
                     Page.setText(String.valueOf(t));
                 }
                 else{
-                    t = 1; 
+                    t = 1;
                     Page.setText(String.valueOf(t));
                 }
             }
