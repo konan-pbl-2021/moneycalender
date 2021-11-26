@@ -19,44 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.09" />
 
-    <ImageButton
-        android:id="@+id/rightbutton"
-        android:layout_width="66dp"
-        android:layout_height="50dp"
-        android:src="@android:drawable/ic_media_play"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.863"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
-
-    <ImageButton
-        android:id="@+id/leftbutton"
-        android:layout_width="66dp"
-        android:layout_height="50dp"
-        android:rotation="180"
-        android:src="@android:drawable/ic_media_play"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044" />
-
-    <TextView
-        android:id="@+id/syuukei"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="集計"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
-
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="391dp"
@@ -208,10 +170,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/month"
-        app:layout_constraintVertical_bias="0.369" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <TextView
         android:id="@+id/goukei_syunyu"
@@ -221,10 +183,10 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goukei_zankin"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/goukei_sisyutsu"
@@ -234,22 +196,23 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goukei_syunyu"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.077" />
 
-    <TextView
-        android:id="@+id/zankin"
-        android:layout_width="315dp"
-        android:layout_height="30dp"
-        android:gravity="left"
-        android:textSize="18sp"
+    <Button
+        android:id="@+id/syukei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showMessage"
+        android:text="集計"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goukei_sisyutsu"
-        app:layout_constraintVertical_bias="0.171" />
+        app:layout_constraintVertical_bias="0.384" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
