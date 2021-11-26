@@ -27,10 +27,10 @@ public class HomeFragment extends Fragment {
 
     private int cnt = 0;
 
-    private CalendarView calendar;
+//    private CalendarView calendar;
 
     public HomeFragment() {
-        this.calendar = calendar;
+//        this.calendar = calendar;
     }
 
     public static HomeFragment newInstance(int count) {
@@ -49,6 +49,7 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+//        calendar = (CalendarView) root.findViewById(R.id.calendarView);
 
 
         //予定表へ行くbutton
@@ -90,33 +91,29 @@ public class HomeFragment extends Fragment {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.fragment_home);
 
-        CalenderView calender;
-        calender = findViewById(R.id.calendarView);
-        calendar.setOnDateChangeListener(
-                new OnDateChangeListener(){
-                    @Override
-                    public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
 
-                    }
-
-
-                    public void onSelectDayChange(@NonNull CalendarView
-                                                  calendarView, int year, int month, int date){
-                        String message = year + "/"+(month +1)+"/"+date;
-                        Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
-
-                    }
-                }
-        );
+//        calendar.setOnDateChangeListener(
+//                new OnDateChangeListener(){
+//                    @Override
+//                    public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+//
+//                    }
+//
+//
+//                    public void onSelectDayChange(@NonNull CalendarView
+//                                                          calendarView, int year, int month, int date){
+//                        String message = year + "/"+(month +1)+"/"+date;
+//                        Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
+//
+//                    }
+//                }
+//        );
     }
 
     private Context getApplicationContext() {
         return null;
     }
 
-    private CalenderView findViewById(int calendarView) {
-        return null;
-    }
 
 
     private void setContentView(int fragment_home) {
