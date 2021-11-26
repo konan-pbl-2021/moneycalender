@@ -34,16 +34,16 @@ public class HomeFragment extends Fragment {
     public static HomeFragment newInstance(int count) {
         HomeFragment homefragment = new HomeFragment();
 
-        Bandle args = new Bandle();
+        Bundle args = new Bundle();
         args.putInt("Counter",count);
         homefragment.setArguments(args);
 
         return homefragment;
     }
 
-    public View onCreateView(@NonNull LayoutInflate inflater,
+    public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container,Bundle savedInstanceState){
-        return inflater.inflate(R.layout.homefragment,container,false);
+        return inflater.inflate(R.layout.fragment_home,container,false);
     }
 
     @Override
@@ -60,11 +60,11 @@ public class HomeFragment extends Fragment {
             EditText eidtText = view.findViewById(R.id.editTextNumber);
 
         }
-        EditText ediText = view.findViewById(R.id.editTextNumber2);
-        ediText = view.findViewById(R.id.editTextNumber3);
+        EditText ediText = view.findViewById(R.id.editTextNumber5);
+        ediText = view.findViewById(R.id.editTextNumber6);
     }
 
-    private void setArguments(Bandle args) {
+    public void setArguments(Bundle args) {
     }
 
     @Override
@@ -105,21 +105,4 @@ public class HomeFragment extends Fragment {
     }
 
     private HomeViewModel homeViewModel;
-
-    private HomeViewModel homeViewModel;
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-//        final TextView textView = root.findViewById(R.id.text_home);
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
-        return root;
-    }
 }
