@@ -67,42 +67,5 @@ public class HomeFragment extends Fragment {
     public void setArguments(Bundle args) {
     }
 
-    @Override
-    public void onCreate(Bundle saveInstanceState){
-        super.onCreate(saveInstanceState);
-        setContentView(R.layout.fragment_home);
 
-        CalenderView calender;
-        calender = findViewById(R.id.calendarView);
-        calendar.setOnDateChangeListener(
-                new OnDateChangeListener(){
-                    @Override
-                    public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-
-                    }
-
-
-                    public void onSelectDayChange(@NonNull CalendarView
-                                                  calendarView, int year, int month, int date){
-                        String message = year + "/"+(month +1)+"/"+date;
-                        Toast.makeText(getApplicationContext(),message,Toast.LENGTH_LONG).show();
-
-                    }
-                }
-        );
-    }
-
-    private Context getApplicationContext() {
-        return null;
-    }
-
-    private CalenderView findViewById(int calendarView) {
-        return null;
-    }
-
-
-    private void setContentView(int fragment_home) {
-    }
-
-    private HomeViewModel homeViewModel;
 }
